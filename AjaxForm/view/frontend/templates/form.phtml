@@ -1,0 +1,52 @@
+<form class="forms contacts"
+      action="<?= $this->getUrl('ajaxform/ajax/save'); ?>"
+      id="contact-form"
+      method="post"
+>
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php echo __('Write Us') ?></span></legend><br />
+        <div class="field note no-label"></div>
+        <div class="field name required">
+            <label class="label" for="name"><span><?php echo __('Name') ?></span></label>
+            <div class="control">
+                <input name="name" id="name" title="<?php echo __('Name') ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?php echo __('Email') ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?php echo __('Email') ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field telephone required">
+            <label class="label" for="telephone"><span><?php echo __('Phone Number') ?></span></label>
+            <div class="control">
+                <input name="telephone" id="telephone" title="<?php echo __('Phone Number') ?>" class="input-text" type="number" data-validate="{required:true, 'validate-number':true}" />
+            </div>
+        </div>
+        <div class="field comment required">
+            <label class="label" for="comment"><span><?php echo __('What is on your mind?') ?></span></label>
+            <div class="control">
+                <textarea name="comment" id="comment" title="<?php echo __('What Is on your mind?') ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary">
+                <span><?php echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
+    <span id="succesmsg"></span>
+</form>
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Digiteon_AjaxForm/js/contactajax": {
+                    "AjaxUrl": "<?= $this->getUrl('ajaxform/ajax/save'); ?>"
+                }
+            }
+        }
+</script>
