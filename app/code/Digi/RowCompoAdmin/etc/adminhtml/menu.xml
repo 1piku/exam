@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Digi_RowCompoAdmin::dynamic_rows"
+             title="Admin Menu"
+             module="Digi_RowCompoAdmin"
+             sortOrder="20"
+             resource="Magento_Backend::content"
+        />
+        <add id="Digi_RowCompoAdmin::dynamic_rowdemo"
+             title="Sub Menu"
+             module="Digi_RowCompoAdmin"
+             sortOrder="1"
+             action="digi/row/index"
+             parent="Digi_RowCompoAdmin::dynamic_rows"
+             resource="Magento_Backend::content"
+        />
+    </menu>
+</config>

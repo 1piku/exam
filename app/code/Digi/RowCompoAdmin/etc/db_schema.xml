@@ -1,0 +1,11 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="digi_dynamic_rows">
+        <column xsi:type="int" name="row_id" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="row_name" length="255" nullable="false" comment="Row Name"/>
+        <column xsi:type="varchar" name="gender" nullable="false" comment="Gender"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="row_id"/>
+        </constraint>
+   </table>
+</schema>
